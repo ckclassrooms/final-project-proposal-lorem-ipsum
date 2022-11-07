@@ -1,5 +1,6 @@
 # final-project-proposal-lorem-ipsum
 
+
 We wake up every morning & read our news through different channels.It maybe good old newspaper to some of us but most of us consume our daily news through newsletters & news websites or applications.
  With current affairs, comes a truck load of memes. A lot of us consume meme content on topics that we are interested in. A feed where you can access and consume memes based on current affairs related to one’s area of interest would be a great start to their day. 
 
