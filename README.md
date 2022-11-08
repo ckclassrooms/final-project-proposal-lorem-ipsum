@@ -11,6 +11,10 @@ We wake up every morning & read our news through different channels.It maybe goo
 As with various content consuming applications, users are trapped in a facade by attackers where malicious content is wrapped with normal functions of that application. Some concerns that might pop up are probable reflective XSS attacks where a user might be redirected to malicious links while accessing content on the feed. Certain user Information(personal) and user behavior might be compromised e
 
 
+# Project Tech Stack
+
+## System Design 
+![Screenshot](system-design.png)
 
 
 
