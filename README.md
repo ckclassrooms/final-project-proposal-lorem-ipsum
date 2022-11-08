@@ -16,7 +16,8 @@ As with various content consuming applications, users are trapped in a facade by
 ## System Design 
 ![Screenshot](system-design.png)
 
+# Minimum Viable Product
 
+We intend to implement a system which includes but is not restricted to a Backend API to search for news articles using Microsoft Bing News API. This will be used in order to obtain the current hot topics which is news for a particular day. From this information, key words for the current affairs will be extracted using Part-of -speech tagging via Spacy API. 
 
-
-
+The next step is to use the obtained keywords to crawl for memes from platforms such as Reddit. To do so, we will hit the Reddit API and procure memes to map the news with memes for the same.
