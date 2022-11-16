@@ -1,12 +1,6 @@
 import React from "react";
 import "./App.css";
 import Nav from './components/NavBar'
-import Landing from './components/Landing'
-
-import {
-  Routes,
-  Route
-} from "react-router-dom";
 import { useState, useEffect } from "react";
 import { supabase } from './supabaseClient'
 

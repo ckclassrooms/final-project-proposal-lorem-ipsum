@@ -33,7 +33,7 @@ function Nav({session, setSession}) {
             if(data){
                 setSession(data)
             }
-         
+            console.log(error)
             console.log(session)  
                 
     }
@@ -41,6 +41,7 @@ function Nav({session, setSession}) {
     const logoutSubmit = async ()=>{
         // Todo - Add logic to logout
         const { error } = await supabase.auth.signOut()
+        console.log(error)
        setSession(null);
     }
 
