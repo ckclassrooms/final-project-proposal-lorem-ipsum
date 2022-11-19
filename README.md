@@ -1,5 +1,5 @@
 ## Deployment URL :https://candid-blini-480f7c.netlify.app/
-## Backend URL :https://karthikhosur.pythonanywhere.com/memes/api?format=json 
+## Backend URL :https://karthikhosur97.pythonanywhere.com/memes/api (Currently its a bit slow since crawling takes time - approx 60-80 secs)
 
 # final-project-proposal-lorem-ipsum
 
