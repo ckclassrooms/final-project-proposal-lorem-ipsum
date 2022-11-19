@@ -24,3 +24,12 @@ As with various content consuming applications, users are trapped in a facade by
 We intend to implement a system which includes but is not restricted to a Backend API to search for news articles using Microsoft Bing News API. This will be used in order to obtain the current hot topics which is news for a particular day. From this information, key words for the current affairs will be extracted using Part-of -speech tagging via Spacy API. 
 
 The next step is to use the obtained keywords to crawl for memes from platforms such as Reddit. To do so, we will hit the Reddit API and procure memes to map the news with memes for the same.
+
+# Minimum Viable Product - Delivered 
+
+Currently our apps backend and frontend is being developed in parallel. Our current Updates is as follows:
+#### Frontend: We have our home page built along with Google Oauth. We have also decided on the Naviagtion bar design. 
+
+
+#### Backend: We have completed building our entire backend API system which finds the most popular news using Microsoft Bing News API. Then we perform POS tag search to extract important keywords from news articles. We use these keywords to query for memes from different Sources like Twitter and Reddit to extract related Memes. We are happy with the results of the news and its corresponding memes. 
+
