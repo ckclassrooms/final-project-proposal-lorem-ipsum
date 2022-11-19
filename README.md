@@ -28,13 +28,17 @@ The next step is to use the obtained keywords to crawl for memes from platforms 
 # Minimum Viable Product - Delivered 
 
 Currently our apps backend and frontend is being developed in parallel. Our current Updates is as follows:
-#### Frontend: We have our home page built along with Google Oauth. We have also decided on the Naviagtion bar design. 
+## Frontend: 
+
+We have our home page built along with Google Oauth. We have also decided on the Naviagtion bar design. 
 Screenshots:
 ![Screenshot](Screenshots/Frontend-1.png)
 ![Screenshot](Screenshots/Frontend-2.png)
 
 
-#### Backend: We have completed building our entire backend API system which finds the most popular news using Microsoft Bing News API. Then we perform POS tag search to extract important keywords from news articles. We use these keywords to query for memes from different Sources like Twitter and Reddit to extract related Memes. We are happy with the results of the news and its corresponding memes. 
+## Backend:
+
+We have completed building our entire backend API system which finds the most popular news using Microsoft Bing News API. Then we perform POS tag search to extract important keywords from news articles. We use these keywords to query for memes from different Sources like Twitter and Reddit to extract related Memes. We are happy with the results of the news and its corresponding memes. 
 
 ![Screenshot](Screenshots/Backend-1.png)
 ![Screenshot](Screenshots/Backend-2.png)
