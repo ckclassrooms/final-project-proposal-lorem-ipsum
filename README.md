@@ -36,3 +36,6 @@ Screenshots:
 
 #### Backend: We have completed building our entire backend API system which finds the most popular news using Microsoft Bing News API. Then we perform POS tag search to extract important keywords from news articles. We use these keywords to query for memes from different Sources like Twitter and Reddit to extract related Memes. We are happy with the results of the news and its corresponding memes. 
 
+![Screenshot](Screenshots/Backend-1.png)
+![Screenshot](Screenshots/Backend-2.png)
+![Screenshot](Screenshots/Backend-3.png)
