@@ -22,7 +22,7 @@ function App() {
     <>
       <Nav session={session} setSession={setSession}/>
  
-    <Display/>
+    <Display session={session}/>
     
     
     </>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Toolbar from '@mui/material/Toolbar';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import { supabase } from '../supabaseClient'
 
 function Nav({session, setSession}) {
+  const [subscribed,setSubscribed]=useState(false)
     const loginSubmit = async ()=>{
         const { data } = await supabase.auth.signInWithOAuth({
             provider: 'google',
@@ -16,6 +17,30 @@ function Nav({session, setSession}) {
                 setSession(data)
             }            
     }
+    if (session != null){
+      let formData = new FormData();
+      formData.append('email_id', session.user.email);
+      console.log(formData)
+      const requestOptions = {
+        method: 'POST',
+        body: formData,
+        redirect: 'follow',
+      };
+    
+      
+      fetch("https://karthikhosur90.pythonanywhere.com/memes/check", requestOptions)
+      
+        .then(response => response.json())
+      
+        .then(result => {
+          console.log(result.data)
+          setSubscribed(result.data)
+        })
+      
+        .catch(error => console.log('error', error));
+
+    }
+
 
     const logoutSubmit = async ()=>{
         const { error } = await supabase.auth.signOut()
@@ -24,28 +49,23 @@ function Nav({session, setSession}) {
     }
     const subscribe = async ()=>
     {
-      const email = { "email_id":  session.user.email}
-      console.log(email)
+      let formData = new FormData();
+      formData.append('email_id', session.user.email);
+      console.log(formData)
       const requestOptions = {
-
         method: 'POST',
-      
-        body: email,
-      
+        body: formData,
         redirect: 'follow',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-      },
-      
       };
     
       
-      fetch("https://karthikhosur45.pythonanywhere.com/memes/subscribe", requestOptions)
+      fetch("https://karthikhosur90.pythonanywhere.com/memes/subscribe", requestOptions)
       
         .then(response => response.text())
       
-        .then(result => console.log(result))
+        .then(result => {
+          setSubscribed(true)
+          console.log(result)})
       
         .catch(error => console.log('error', error));
       
@@ -61,10 +81,10 @@ function Nav({session, setSession}) {
     if (session != null){
         return (
             <>
-              <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
+              <Toolbar sx={{ borderBottom: 1, borderColor: 'divider',marginBottom:10 }}>
               <IconButton>
               <Button variant="outlined" size="small" onClick={()=>subscribe()}>
-                  Subscribe Newsletter
+              {subscribed? 'Newsletter  Subscribed' : 'Subscribe Newsletter'}
                 </Button>
                 </IconButton>
                 <Typography
