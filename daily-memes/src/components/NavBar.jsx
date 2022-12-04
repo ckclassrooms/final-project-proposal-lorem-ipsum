@@ -20,7 +20,7 @@ function Nav({session, setSession}) {
     if (session != null){
       let formData = new FormData();
       formData.append('email_id', session.user.email);
-      console.log(formData)
+      console.log(session.user.email)
       const requestOptions = {
         method: 'POST',
         body: formData,
@@ -28,7 +28,7 @@ function Nav({session, setSession}) {
       };
     
       
-      fetch("https://karthikhosur90.pythonanywhere.com/memes/check", requestOptions)
+      fetch("https://karthikhosur100.pythonanywhere.com/memes/check", requestOptions)
       
         .then(response => response.json())
       
@@ -38,6 +38,7 @@ function Nav({session, setSession}) {
         })
       
         .catch(error => console.log('error', error));
+        console.log("subscribed",subscribed)
 
     }
 
@@ -59,7 +60,7 @@ function Nav({session, setSession}) {
       };
     
       
-      fetch("https://karthikhosur90.pythonanywhere.com/memes/subscribe", requestOptions)
+      fetch("https://karthikhosur100.pythonanywhere.com/memes/subscribe", requestOptions)
       
         .then(response => response.text())
       
@@ -69,6 +70,7 @@ function Nav({session, setSession}) {
       
         .catch(error => console.log('error', error));
       
+       
       // try {
       //   const res = await axios.post('https://karthikhosur45.pythonanywhere.com/memes/subscribe', email)
       //   console.log(res.data)
@@ -84,7 +86,7 @@ function Nav({session, setSession}) {
               <Toolbar sx={{ borderBottom: 1, borderColor: 'divider',marginBottom:10 }}>
               <IconButton>
               <Button variant="outlined" size="small" onClick={()=>subscribe()}>
-              {subscribed? 'Newsletter  Subscribed' : 'Subscribe Newsletter'}
+              {subscribed === false ? 'Subscribe Newsletter' : ' Newsletter Subscribed'}
                 </Button>
                 </IconButton>
                 <Typography

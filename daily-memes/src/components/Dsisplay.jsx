@@ -20,7 +20,7 @@ function Display({session}) {
    },[]);
    
    
-    const url= "https://karthikhosur90.pythonanywhere.com/memes/cache?format=json"
+    const url= "https://karthikhosur100.pythonanywhere.com/memes/cache?format=json"
     const getAllMemes =() => {
         axios.get(url,headers).then((response) => {
             const allMemes=response.data
@@ -43,10 +43,10 @@ if(memes!==undefined)
 
                     <Grid
                         item
-                        xs={6}
+                        xs={5}
                         >
                        
-                        <Box sx={{ paddingLeft: '100px' }} >
+                        <Box sx={{ paddingLeft: '70px' }} >
                             <Carousel >
                                 
                                 {news.meme_urls.map((i) => (
@@ -54,9 +54,9 @@ if(memes!==undefined)
                                         component="img"
                                         sx={{
                                             height: 600,
-                                            width: 500,
-                                            objectFit: 'cover'
+                                            width: 600,
                                         }}
+                                     
                                         src={i}
                                     />
 
