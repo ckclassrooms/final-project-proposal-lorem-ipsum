@@ -1,5 +1,5 @@
 ## Deployment URL :https://candid-blini-480f7c.netlify.app/
-## Backend URL : https://karthikhosur100.pythonanywhere.com/memes/all?format=json (Currently its a bit slow since crawling takes time - approx 60-80 secs)
+## Backend URL : https://karthikhosur100.pythonanywhere.com/memes/cache?format=json 
 ### Backend Github Repo : https://github.com/karthikhosur/django-memes-api.git (We are currently using a different repository for the backend,since deployment had issues)
 # final-project-proposal-lorem-ipsum
 
