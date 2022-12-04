@@ -84,11 +84,11 @@ function Nav({session, setSession}) {
         return (
             <>
               <Toolbar sx={{ borderBottom: 1, borderColor: 'divider',marginBottom:10 }}>
-              <IconButton>
+              {subscribed === "false" &&
               <Button variant="outlined" size="small" onClick={()=>subscribe()}>
-              {subscribed === false ? 'Subscribe Newsletter' : ' Newsletter Subscribed'}
+              Subscribe Newsletter
                 </Button>
-                </IconButton>
+    }
                 <Typography
                   component="h2"
                   variant="h5"
@@ -99,9 +99,7 @@ function Nav({session, setSession}) {
                 >
                   Daily Memes
                 </Typography>
-                <IconButton>
-                    <SearchIcon />
-                </IconButton>
+                
                 <Button variant="outlined" size="small" onClick={()=>logoutSubmit()}>
                   Log Out
                 </Button>
