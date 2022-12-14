@@ -20,7 +20,7 @@ function Display({session}) {
    },[]);
    
    
-    const url= "https://karthikhosur100.pythonanywhere.com/memes/cache?format=json"
+    const url= "https://karthikhosur100.pythonanywhere.com/memes/api?format=json"
     const getAllMemes =() => {
         axios.get(url,headers).then((response) => {
             const allMemes=response.data
